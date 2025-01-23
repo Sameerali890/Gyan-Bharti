@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+
+.main-name{
+    font-family: "Smooch Sans", serif ;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #e79d22;
+}
+
 /********** Template CSS **********/
 :root {
     --primary: #06BBCC;
@@ -100,7 +110,14 @@
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: #e79d22;
+}
+.topper:active{
+    color: #e79d22 !important;
+}
+.btn{
+    background-color: #e79d22;
+    color: #084c89;
 }
 
 @media (max-width: 991.98px) {
@@ -120,7 +137,7 @@
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: var(--dark);
+    color: #084c89;
     font-weight: 500;
 }
 
@@ -169,6 +186,13 @@
     }
 }
 
+.banner-first{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 889px;
+}
+
 .header-carousel .owl-nav {
     position: absolute;
     top: 50%;
@@ -200,13 +224,13 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(https://media.istockphoto.com/id/1211513704/vector/about-us-blue-typography-banner.jpg?s=612x612&w=0&k=20&c=S-ewuVmyuvs59kbU6EaQO2BL1D4HGJ0T_h-PUhLDXnU=);
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img//Banners/About-us.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .contact-header {
-    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(https://www.gaposm.com/wp-content/uploads/2017/10/contact-us-banner.png);
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img//Banners/Contact-Us-img.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -218,13 +242,25 @@
     background-size: cover;
 }
 .testomonial-header {
-    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(https://www.cadd.co.in/gallery/testimonials.jpg);
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img//Banners/Testimonial-img.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .team-header {
-    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(https://www.procurementheads.com/wp-content/uploads/2018/11/Meet-the-team-banner.jpg);
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/Banners/Our-Team.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.topper-header {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/Ourstars.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ssc-header {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/Ourstars.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
