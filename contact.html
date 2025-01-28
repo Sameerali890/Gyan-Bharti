@@ -139,37 +139,68 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.52629668376!2d76.76357783356833!3d28.643684634738104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1736955748801!5m2!1sen!2sin" width="400" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+    <input type="hidden" name="access_key" value="c5abd33b-3503-4481-a5ce-6920a4621253">
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" name="Your-Name" class="form-control" id="name" placeholder="Your Name">
+                <label for="name">Your Name</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="email" name="Your-Email" class="form-control" id="email" placeholder="Your Email">
+                <label for="email">Your Email</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-floating">
+                <input type="text" name="Subject" class="form-control" id="subject" placeholder="Subject">
+                <label for="subject">Subject</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                <label for="message">Message</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    // Select the form
+    const form = document.getElementById('contactForm');
+    
+    // Add an event listener to handle the form submission
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevents the form from submitting the default way
+
+        // Create a new FormData object to handle the form submission via AJAX
+        const formData = new FormData(form);
+
+        // Make an AJAX request to the API
+        fetch(form.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            // On successful submission, reset the form
+            form.reset(); // Clears all input fields
+            alert('Message sent successfully!'); // Optionally, you can show a success message
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again later.');
+        });
+    });
+</script>
+
                 </div>
             </div>
         </div>
@@ -237,6 +268,21 @@
     </div>
     <!-- Footer End -->
 
+     <!-- Whatsapp Icon -->
+     <div>
+        <a
+          class=" position-fixed" style="bottom: 50%; right: 20px; z-index: 100;"
+          href="https://wa.me/918853606940?text=Hello!%20Thank%20you%20for%20reaching%20out%20to%20Rising%20IT%20Solutions.%20How%20can%20we%20assist%20you%20today?"
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <img 
+            src=".//img/whatsapp (1).png" 
+            style="width: 70px;" 
+            alt="WhatsApp"
+          />
+        </a>
+      </div>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
